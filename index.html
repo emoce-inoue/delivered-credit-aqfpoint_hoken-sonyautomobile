@@ -35,9 +35,10 @@
     <!-- css/js -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="style" fetchpriority="high" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" media="print" onload="this.media='all'" />
+    <link rel="preload" as="style" fetchpriority="high" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'" />
     <link rel="stylesheet" href="swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@6.3.3/dist/simplebar.css" />
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -162,8 +163,9 @@
           <p class="l-point__heading">｢セゾンの自動車保険 by ソニー損保｣なら</p>
           <div class="l-point__comparison">
             <div class="l-point__comparison-item">
+              <i class="l-point__comparison-item-plus"></i>
               <p class="l-point__comparison-label">通常のポイント</p>
-              <p class="l-point__comparison-description">セゾンカード･UCカードでのお支払いで</p>
+              <p class="l-point__comparison-description">セゾンカード･UC<br class="no-pc">カードでのお支払いで</p>
               <div class="l-point__comparison-amount-wrapper">
                 <p class="l-point__comparison-amount">1,000円<small class="l-point__comparison-amount-unit">につき</small></p>
                 <div class="l-point__comparison-value-wrapper">
@@ -194,18 +196,20 @@
             <p class="l-point__notes-item">＊1ポイント＝最大5円相当。交換商品によっては、1ポイントの価値は5円未満になります。</p>
             <p class="l-point__notes-item l-point__notes-item--bold">永久不滅ポイントが貯まる仕組みは、ソニー損保が募集経費の削減効果などをお客様へ還元することで実現しました。</p>
           </div>
+          <button class="l-point-modal__button" aria-haspopup="dialog" aria-controls="point-modal">
+            ｢セゾンの自動車保険 by ソニー損保｣の<br class="no-pc">ポイント付与詳細はこちら
+            <i class="l-point-modal__button-icon" aria-hidden="true"></i>
+          </button>
         </div>
 
         <div class="l-conditions">
-          <div class="l-container">
-            <div class="l-conditions__inner js-fade">
-              <strong class="l-conditions__title">ご加入条件</strong>
-              <ul class="l-conditions__list">
-                <li class="l-conditions__list-item">クレディセゾンが発行する、永久不滅ポイントが貯まるセゾンカード･UCカード会員様のみご加入いただけます(法人カード除く)。</li>
-                <li class="l-conditions__list-item">WEBサービスNetアンサー/アットユーネットに登録のうえ、ご加入手続きをお願いいたします。</li>
-                <li class="l-conditions__list-item">家族カード(ファミリーカード)会員の場合は、ご自身のIDでNetアンサー/アットユーネットにログインのうえお手続きいただきますようご注意ください(家族カードであっても<span class="l-conditions__list-item-accent">ログイン会員様と保険契約者様が異なる場合、｢セゾンの自動車保険 by ソニー損保｣のポイントの付与対象とはなりません</span>)。</li>
-              </ul>
-            </div>
+          <div class="l-conditions__inner l-container js-fade">
+            <strong class="l-conditions__title">ご加入条件</strong>
+            <ul class="l-conditions__list">
+              <li class="l-conditions__list-item">クレディセゾンが発行する、永久不滅ポイントが貯まるセゾンカード･UCカード会員様のみご加入いただけます(法人カード除く)。</li>
+              <li class="l-conditions__list-item">WEBサービスNetアンサー/アットユーネットに登録のうえ、ご加入手続きをお願いいたします。</li>
+              <li class="l-conditions__list-item">家族カード(ファミリーカード)会員の場合は、ご自身のIDでNetアンサー/アットユーネットにログインのうえお手続きいただきますようご注意ください(家族カードであっても<span class="l-conditions__list-item-accent">ログイン会員様と保険契約者様が異なる場合、｢セゾンの自動車保険 by ソニー損保｣のポイントの付与対象とはなりません</span>)。</li>
+            </ul>
           </div>
         </div>
 
@@ -221,18 +225,24 @@
               <p class="l-discount__label">合わせて</p>
             </div>
             <div class="l-discount__amount">
-              <span class="l-discount__amount-prefix">最大</span>
-              <span class="l-discount__amount-number">15,000</span>
-              <span class="l-discount__amount-unit">円</span>
-              <span class="l-discount__amount-suffix">割引</span>
-              <sup class="l-discount__amount-note">※</sup>
+              <span class="l-discount__amount-pop">1年契約の場合</span>
+              <div class="l-discount__amount-inner">
+                <span class="l-discount__amount-prefix">最大</span>
+                <span class="l-discount__amount-number">15,000</span>
+                <span class="l-discount__amount-unit">円</span>
+                <span class="l-discount__amount-suffix">割引</span>
+                <sup class="l-discount__amount-note">※</sup>
+              </div>
             </div>
-            <p class="l-discount__note">※割引額の内訳：新規申込時のインターネット割引(12,000円)、無事故割引(2,500円)、証券ペーパーレス割引(500円)</p>
+            <p class="l-discount__note">
+              ※割引額の内訳：新規申込時のインターネット割引(12,000円)、無事故割引(2,500円)、証券ペーパーレス割引(500円)<br>
+              なお、当該割引は1年契約の場合です。3年契約の場合は割引額が異なります。
+            </p>
           </div>
-          <div class="l-cta">
-            <div class="l-button__wrapper js-fadeup">
-              <a href="https://api.saisonid.com/api/redirect/sc/zi103" class="l-button l-button--adjustment js-parameter-link">
-                <p class="l-button__text"><small class="l-button__text-small">今すぐ</small>無料お見積もり</p>
+          <div class="l-cta js-fadeup">
+            <div class="l-button__wrapper">
+              <a href="https://api.saisonid.com/api/redirect/sc/zi103" class="l-button l-button--big l-button--adjustment js-parameter-link">
+                <p class="l-button__text"><small class="l-button__text-small l-button__text-small--big">今すぐ</small>無料お見積もり</p>
               </a>
             </div>
             <a href="#other" class="l-point__link">その他の自動車保険はこちら</a>
@@ -275,7 +285,7 @@
 
           <ol class="l-service-intro__points">
             <li id="serviceIntroPoint1" class="l-service-intro__point">
-              <div class="l-service-intro__point-inner l-container">
+              <div class="l-service-intro__point-inner">
                 <div class="l-service-intro__point-header js-fade">
                   <p class="l-service-intro__point-label"><img src="images/point01-title.webp" width="" height="" alt="POINT 特徴1"></p>
                   <h3 class="l-service-intro__point-title"><span class="l-service-intro__point-title-highlight">ソニー損保</span>の保険料は<br class="no-pc">｢走る分だけ｣</h3>
@@ -288,18 +298,21 @@
                     <p class="l-service-intro__point-note">※使用目的が｢主に業務用｣または記名被保険者が法人のご契約については、走行距離によるリスク細分は適用されません。</p>
                   </div>
                 </div>
-                <ul class="l-service-intro__point-details">
+                <ul class="l-service-intro__point-details l-container">
                   <li class="l-service-intro__point-detail js-fadeup">
                     <p class="l-service-intro__point-detail-title">走行距離に応じた保険料お得度イメージ</p>
                     <div class="l-service-intro__point-detail-image l-service-intro__point-detail-image--01-1"><img src="images/point-image02.webp" width="" height="" alt="予想年間走行距離イメージ"></div>
-                    <p class="l-service-intro__point-detail-text">主に家庭用に使用される方の保険料を予想年間走行距離に応じて以下の7区分で算出します。｢3,000km 以下｣｢5,000km 以下｣｢7,000km 以下｣｢9,000km 以下｣｢11,000km 以下｣｢16,000km 以下｣｢無制限｣</p>
-                    <p class="l-service-intro__point-detail-note">＊画像はイメージです。</p>
+                    <p class="l-service-intro__point-detail-text">主に家庭用に使用される方の保険料を予想年間走行距離に応じて以下の7区分で算出します。｢3,000km 以下｣｢5,000km 以下｣｢7,000km 以下｣｢9,000km 以下｣｢11,000km 以下｣｢16,000km 以下｣｢無制限｣<sup class="l-service-intro__point-sup">※</sup></p>
+                    <p class="l-service-intro__point-detail-note">
+                      ※保険期間により契約距離区分は異なります。<br>
+                      ＊画像はイメージです。
+                    </p>
                   </li>
                   <li class="l-service-intro__point-detail js-fadeup">
                     <p class="l-service-intro__point-detail-title">走らなかった分はくりこし割引</p>
                     <div class="l-service-intro__point-detail-image l-service-intro__point-detail-image--01-2"><img src="images/point-image03.webp" width="" height="" alt="くりこしイメージ"></div>
-                    <p class="l-service-intro__point-detail-text">走らなかった分の保険料は、翌年にくりこして割引。<sup>※</sup></p>
-                    <p class="l-service-intro__point-detail-note">※保険期間中の｢走った距離｣が契約距離区分の上限キロ数より｢1,000km以上｣少なかった場合は、その差額保険料に相当する額を、翌年の契約の保険料から割引きます。割引の適用には所定の条件があります。<br>＊画像はイメージです。</p>
+                    <p class="l-service-intro__point-detail-text">走らなかった分の保険料は、継続契約にくりこして割引。<sup>※</sup></p>
+                    <p class="l-service-intro__point-detail-note">※保険期間中の｢走った距離｣が契約距離区分の上限キロ数より｢1,000km以上｣少なかった場合は、その差額保険料に相当する額を、継続の契約の保険料から割引きます。割引の適用には所定の条件があります。また、前契約あるいは継続契約が3年契約の場合は適用条件が異なりますので、詳細は重要事項説明書等をご確認ください。<br>＊画像はイメージです。</p>
                   </li>
                   <li class="l-service-intro__point-detail js-fadeup">
                     <p class="l-service-intro__point-detail-title">さらに！こんな割引もご用意しています</p>
@@ -319,7 +332,7 @@
                         </li>
                         <li class="l-service-intro__discount-item">
                           <div class="l-service-intro__discount-icon"><img src="images/point01-asv.webp"width="" height="" alt=" ASV割引のイラスト"></div>
-                          <p class="l-service-intro__discount-name"> ASV割引<br><span class="l-service-intro__discount-name-sub">(自動ブレーキ割引)</span></p>
+                          <p class="l-service-intro__discount-name">ASV割引<br><span class="l-service-intro__discount-name-sub">(自動ブレーキ割引)</span></p>
                         </li>
                       </ul>
                       <ul class="l-service-intro__discount-list">
@@ -336,7 +349,7 @@
               </div>
             </li>
             <li id="serviceIntroPoint2" class="l-service-intro__point">
-              <div class="l-service-intro__point-inner l-container">
+              <div class="l-service-intro__point-inner">
                 <div class="l-service-intro__point-header js-fade">
                   <p class="l-service-intro__point-label"><img src="images/point02-title.webp" width="" height="" alt="POINT 特徴2"></p>
                   <h3 class="l-service-intro__point-title">安心の事故対応サービス</h3>
@@ -388,7 +401,7 @@
                     <p class="l-service-intro__point-detail-note">※相手方との示談交渉は、必要に応じて弁護士に対応を依頼することがあります。</p>
                   </div>
                 </div>
-                <ul class="l-service-intro__point-details">
+                <ul class="l-service-intro__point-details l-container">
                   <li class="l-service-intro__point-detail js-fadeup">
                     <p class="l-service-intro__point-detail-title">顔が見える訪問サービス</p>
                     <div class="l-service-intro__point-detail-image l-service-intro__point-detail-image--02-1"><img src="images/point02-image02.webp" width="" height="" alt="訪問サービスを受けるイラスト"></div>
@@ -411,7 +424,7 @@
               </div>
             </li>
             <li id="serviceIntroPoint3" class="l-service-intro__point">
-              <div class="l-service-intro__point-inner l-container">
+              <div class="l-service-intro__point-inner">
                 <div class="l-service-intro__point-header js-fade">
                   <p class="l-service-intro__point-label"><img src="images/point03-title.webp" width="" height="" alt="POINT 特徴3"></p>
                   <h3 class="l-service-intro__point-title">充実のロードサービスが<br class="no-pc">無料付帯</h3>
@@ -425,7 +438,7 @@
               </div>
               <div class="l-service-intro__point-road-services">
                 <p class="l-service-intro__point-road-note js-fade">外出先でご契約のお車が<br>自力走行できなくなった場合もご安心ください</p>
-                <ul class="l-service-intro__point-details l-service-intro__point-details--road">
+                <ul class="l-service-intro__point-details l-service-intro__point-details--road l-container">
                   <li class="l-service-intro__point-detail js-fadeup">
                     <p class="l-service-intro__point-detail-title">お車のレッカーけん引</p>
                     <div class="l-service-intro__point-detail-image l-service-intro__point-detail-image--03-1"><img src="images/point03-image02.webp" width="" height="" alt="レッカー車のイラスト"></div>
@@ -436,13 +449,322 @@
                     <p class="l-service-intro__point-detail-text">ご自宅または目的地までの交通費や、帰宅困難時の1泊までの宿泊費を搭乗者全員分お支払いします。ただし、お支払いの対象となる人数は、車検証記載の定員数が上限です。</p>
                   </li>
                 </ul>
-                <p class="l-service-intro__point-detail-note js-fade">※各サービスは、ソニー損保の提携会社から提供されます。各サービスのご利用にあたっては所定の条件があり、お客様に費用負担が発生する場合等があります。詳しくはソニー損保ウェブサイト上にある｢ロードサービス利用規約｣などをご覧ください。</p>
+                <p class="l-service-intro__point-detail-note l-container js-fade">※各サービスは、ソニー損保の提携会社から提供されます。各サービスのご利用にあたっては所定の条件があり、お客様に費用負担が発生する場合等があります。詳しくはソニー損保ウェブサイト上にある｢ロードサービス利用規約｣などをご覧ください。</p>
               </div>
-              <div class="l-button__wrapper js-fadeup">
-                <a href="https://api.saisonid.com/api/redirect/sc/zi103" class="l-button l-button--adjustment js-parameter-link">
-                  <p class="l-button__text"><small class="l-button__text-small">今すぐ</small>無料お見積もり</p>
-                  </a>
+            </li>
+            <li id="serviceIntroPoint4" class="l-service-intro__point">
+              <div class="l-service-intro__point-inner l-service-intro__point-inner--choice">
+                <div class="l-service-intro__point-header js-fade">
+                  <p class="l-service-intro__point-label"><img src="images/point04-title.webp" width="" height="" alt="POINT 特徴4"></p>
+                  <h3 class="l-service-intro__point-title">3年契約という新しい選択肢</h3>
                 </div>
+                <div class="l-service-intro__point-choice">
+                  <ul class="l-service-intro__point-details l-service-intro__point-details--choice l-container">
+                    <li class="l-service-intro__point-detail l-service-intro__point-detail--choice js-fadeup">
+                      <p class="l-service-intro__point-choice-index"><img src="images/point04-no1.webp" width="" height="" alt="1"></p>
+                      <p class="l-service-intro__point-detail-title l-service-intro__point-detail-title--choice">保険を使っても3年間は</p>
+                      <p class="l-service-intro__point-choice-text">保険料が<span class="l-service-intro__point-choice-larege"><br class="no-sp">変わりません</span></p>
+                    </li>
+                    <li class="l-service-intro__point-detail l-service-intro__point-detail--choice js-fadeup">
+                      <p class="l-service-intro__point-choice-index"><img src="images/point04-no2.webp" width="" height="" alt="2"></p>
+                      <p class="l-service-intro__point-detail-title l-service-intro__point-detail-title--choice">3年間無事故なら</p>
+                      <p class="l-service-intro__point-choice-text"><span class="l-service-intro__point-choice-larege">お祝い金</span>を<br class="no-sp">受取れる</p>
+                    </li>
+                    <li class="l-service-intro__point-detail l-service-intro__point-detail--choice js-fadeup">
+                      <p class="l-service-intro__point-choice-index"><img src="images/point04-no3.webp" width="" height="" alt="3"></p>
+                      <p class="l-service-intro__point-detail-title l-service-intro__point-detail-title--choice">保険期間は3年間だから</p>
+                      <p class="l-service-intro__point-choice-text">更新手続きは<br class="no-sp"><span class="l-service-intro__point-choice-larege">3年</span>に<span class="l-service-intro__point-choice-larege">1度</span></p>
+                    </li>
+                  </ul>
+                </div>
+                <details class="l-choice__accordion">
+                  <summary class="l-choice__accordion-summary js-fade">
+                    詳細はこちら
+                    <i class="l-choice__accordion-summary-icon"></i>
+                  </summary>
+                  <div class="l-choice__accordion-content l-container">
+                    <div class="l-choice__accordion-content-inner">
+                      <p class="l-choice__accordion-catch js-fade">
+                        保険期間は3年間！<br class="no-pc">保険を使っても等級が変わらず、<br class="no-sp">契約時に決定<br class="no-pc">した保険料も変わりません
+                      </p>
+                      <div class="l-choice__accordion-graph">
+                        <div class="l-choice__accordion-graph-header js-fade">
+                          <p class="l-choice__accordion-graph-text">〈ノンフリート等級と割引率のイメージ〉</p>
+                          <p class="l-choice__accordion-note">※下記の図はあくまでも一例です。</p>
+                        </div>
+                        <div class="l-choice__accordion-graph-visual">
+                          <div class="l-choice__accordion-graph-image js-fadeup"><img src="images/point04-graph1.webp" width="" height="" alt="1年契約の場合のイメージ図"></div>
+                          <div class="l-choice__accordion-graph-image js-fadeup"><img src="images/point04-graph2.webp" width="" height="" alt="3年契約の場合のイメージ図"></div>
+                        </div>
+                        <p class="l-service-intro__point-detail-note js-fade">※ご継続時は、前契約の保険期間･事故件数･事故の内容等に応じて、等級および事故あり係数適用期間を決定します。</p>
+                      </div>
+                      <div class="l-choice__accordion-feature">
+                        <div class="l-choice__accordion-feature-gift">
+                          <div class="l-choice__accordion-feature-visual js-fadeup">
+                            <div class="l-choice__accordion-feature-image"><img src="images/point04-gift.webp" width="" height="" alt="GIFTのイラスト"></div>
+                          </div>
+                          <div class="l-choice__accordion-feature-content">
+                            <p class="l-choice__accordion-catch js-fade">
+                              3年間無事故であれば、<br>
+                              無事故お祝い金をお支払いします
+                            </p>
+                            <p class="l-choice__accordion-note l-choice__accordion-note--thick js-fade">以下の条件をすべて満たす場合に、無事故お祝い金としてご契約の保険料の約15％<sup>※1※2</sup>を受取れます。</p>
+                          </div>
+                        </div>
+                        <ol class="l-choice__accordion-list js-fadeup">
+                          <li class="l-choice__accordion-list-item">
+                            <p class="l-choice__accordion-list-heading">条件 1</p>
+                            <p class="l-choice__accordion-list-text">ご契約が満期を迎えたこと</p>
+                          </li>
+                          <li class="l-choice__accordion-list-item">
+                            <p class="l-choice__accordion-list-heading">条件 2</p>
+                            <p class="l-choice__accordion-list-text">ご契約にかかる保険料をすべてお支払いいただいていること</p>
+                          </li>
+                          <li class="l-choice__accordion-list-item">
+                            <p class="l-choice__accordion-list-heading">条件 3</p>
+                            <p class="l-choice__accordion-list-text">保険期間中に、等級ダウン事故が発生していないこと</p>
+                          </li>
+                        </ol>
+                        <p class="l-service-intro__point-detail-note js-fade">
+                          ※1　保険期間中の契約条件の変更等によってご契約の保険料が変わった場合は、無事故お祝い金の額には反映しません。<br>
+                          ※2　無事故お祝い金の額を算出するご契約の保険料は、リスクに応じた部分で算出します。詳細は申込画面等をご確認ください。
+                        </p>
+                      </div>
+                    </div>
+                    <div class="l-table__wrapper">
+                      <p class="l-table__heading js-fade">契約期間ごとの主な違い (1年契約･3年契約)</p>
+                      <div class="l-table-detail js-comparison-scroll js-fade">
+                        <table class="l-table-detail__content">
+                          <thead>
+                            <tr>
+                              <th colspan="2" class="l-table-detail__blank"></th>
+                              <th class="l-table-detail__head l-table-detail__head--one">
+                                1年契約
+                              </th>
+                              <th class="l-table-detail__head l-table-detail__head--three">
+                                3年契約
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th rowspan="3" class="l-table-detail__category l-table-detail__category--first">
+                                <span class="l-table-detail__category-text">基本事項</span>
+                              </th>
+                              <th class="l-table-detail__label">
+                                保険料
+                              </th>
+                              <td class="l-table-detail__data l-table-detail__data--first">
+                                1年ごとに変動
+                              </td>
+                              <td class="l-table-detail__data l-table-detail__data--three">
+                                契約時に定めた保険料が<br>
+                                3年間変動なし <sup>※1</sup>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th class="l-table-detail__label">
+                                等級
+                              </th>
+                              <td class="l-table-detail__data">
+                                1年ごとに見直し
+                              </td>
+                              <td class="l-table-detail__data l-table-detail__data--three">
+                                3年間据え置き
+                              </td>
+                            </tr>
+                            <tr>
+                              <th class="l-table-detail__label">
+                                更新頻度
+                              </th>
+                              <td class="l-table-detail__data">
+                                毎年
+                              </td>
+                              <td class="l-table-detail__data l-table-detail__data--three">
+                                3年に1度
+                              </td>
+                            </tr>
+                            <tr>
+                              <th rowspan="2" class="l-table-detail__category">
+                                <span class="l-table-detail__category-text">主なリスク細分</span>
+                              </th>
+                              <th class="l-table-detail__label">
+                                契約距離区分<br>
+                                <small class="l-table-detail__label-note">＊使用目的が<br class="no-pc">「家庭用」の場合</small>
+                              </th>
+                              <td class="l-table-detail__data">
+                                1年間の予想走行距離
+                              </td>
+                              <td class="l-table-detail__data l-table-detail__data--three">
+                                3年間の予想走行距離
+                              </td>
+                            </tr>
+                            <tr>
+                              <th class="l-table-detail__label">
+                                運転免許証の色
+                              </th>
+                              <td class="l-table-detail__data">
+                                保険始期日時点の<br class="no-pc">運転免許証の色
+                              </td>
+                              <td class="l-table-detail__data l-table-detail__data--three">
+                                保険始期日時点の<br class="no-pc">運転免許証の色<br>
+                                <small class="l-table-detail__data-note">＊保険始期日時点の運転免許証の色がゴールドの場合、３年間ゴールド免許割引が適用されます。</small>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th rowspan="4" class="l-table-detail__category l-table-detail__category--last">
+                                <span class="l-table-detail__category-text">主な割引</span>
+                              </th>
+                              <th class="l-table-detail__label">
+                                インターネット割引
+                              </th>
+                              <td class="l-table-detail__data">
+                                新規インターネット割引<br>
+                                12,000円 <sup>※2</sup>
+                              </td>
+                              <td class="l-table-detail__data l-table-detail__data--three">
+                                年度ごとに8,000円<small class="l-table-detail__data-small">(新規契約のみ)</small><br>
+                                <small class="l-table-detail__data-note">＊3年間の合計割引額は24,000円 <sup>※2</sup></small>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th class="l-table-detail__label">
+                                無事故割引
+                              </th>
+                              <td class="l-table-detail__data">
+                                2,500円
+                              </td>
+                              <td class="l-table-detail__data l-table-detail__data--three">
+                                年度ごとに2,500円<br>
+                                <small class="l-table-detail__data-note">＊3年間の合計割引額は7,500円</small>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th class="l-table-detail__label">
+                                証券ペーパーレス割引
+                              </th>
+                              <td class="l-table-detail__data">
+                                500円
+                              </td>
+                              <td class="l-table-detail__data l-table-detail__data--three">
+                                第1年度のみ 500円
+                              </td>
+                            </tr>
+                            <tr>
+                              <th class="l-table-detail__label">
+                                マイページ新規申込割引
+                              </th>
+                              <td class="l-table-detail__data">
+                                1,000円
+                              </td>
+                              <td class="l-table-detail__data l-table-detail__data--three l-table-detail__data--last">
+                                第1年度のみ 1,000円
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <p class="l-service-intro__point-detail-note js-fade">
+                        ※1 3年契約は、必ずしも保険料が安くなるものではありません。3年契約には「無事故お祝い金特約（3年契約のみ）」の保険料が含まれるなど、1年契約とは保険料の算出方法が一部異なるため、1年契約を3年間継続した場合と比べて、保険料が高くなることがあります。<br>
+                        ※2 継続契約の場合は、継続回数やウェブ申込有無で割引額が異なります。
+                      </p>
+                    </div>
+                    <div class="l-table__wrapper l-table__wrapper--pay">
+                      <p class="l-table__heading js-fade">3年契約　保険料の支払方法について</p>
+                      <div class="l-howto-pay js-fade">
+                        <table class="l-howto-pay__content">
+                          <thead>
+                            <tr>
+                              <th colspan="1" class="l-howto-pay__blank"></th>
+                              <th class="l-howto-pay__head l-howto-pay__head--first">
+                                クレジット<br class="no-pc">カード払
+                              </th>
+                              <th class="l-howto-pay__head">
+                                払込票 <sup>※3</sup>
+                              </th>
+                              <th class="l-howto-pay__head l-howto-pay__head--last">
+                                銀行振込
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th class="l-howto-pay__label l-howto-pay__label--first">
+                                一括払
+                              </th>
+                              <td class="l-howto-pay__data l-howto-pay__data--first">
+                                <span class="l-howto-pay__data-icon"><img src="images/x.svg" width="" height="" alt="お選びいただけません。"></span>
+                              </td>
+                              <td class="l-howto-pay__data l-howto-pay__data--first">
+                                <span class="l-howto-pay__data-icon"><img src="images/x.svg" width="" height="" alt="お選びいただけません。"></span>
+                              </td>
+                              <td class="l-howto-pay__data l-howto-pay__data--first l-howto-pay__data--last">
+                                <span class="l-howto-pay__data-icon"><img src="images/x.svg" width="" height="" alt="お選びいただけません。"></span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th class="l-howto-pay__label">
+                                年払(3回払)
+                              </th>
+                              <td class="l-howto-pay__data">
+                                <span class="l-howto-pay__data-icon"><img src="images/cycle.svg" width="" height="" alt="お選びいただけます。"></span>
+                                <sup class="l-howto-pay__data-sup">※1</sup>
+                              </td>
+                              <td class="l-howto-pay__data">
+                                <span class="l-howto-pay__data-icon"><img src="images/cycle.svg" width="" height="" alt="お選びいただけます。"></span>
+                              </td>
+                              <td class="l-howto-pay__data l-howto-pay__data--last">
+                                <span class="l-howto-pay__data-icon"><img src="images/x.svg" width="" height="" alt="お選びいただけません。"></span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th class="l-howto-pay__label l-howto-pay__label--last">
+                                年払(35回払)
+                              </th>
+                              <td class="l-howto-pay__data">
+                                <span class="l-howto-pay__data-icon"><img src="images/cycle.svg" width="" height="" alt="お選びいただけます。"></span>
+                                <sup class="l-howto-pay__data-sup">※2</sup>
+                              </td>
+                              <td class="l-howto-pay__data">
+                                <span class="l-howto-pay__data-icon"><img src="images/x.svg" width="" height="" alt="お選びいただけません。"></span>
+                              </td>
+                              <td class="l-howto-pay__data l-howto-pay__data--last">
+                                <span class="l-howto-pay__data-icon"><img src="images/x.svg" width="" height="" alt="お選びいただけません。"></span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="l-howto-pay__note js-fade">
+                        <div class="l-howto-pay__note-list">
+                          <div class="l-howto-pay__note-item">
+                            <div class="l-howto-pay__note-icon"><img src="images/cycle.svg" width="" height="" alt="○"></div>
+                            <p class="l-howto-pay__note-text">お選びいただけます。</p>
+                          </div>
+                          <div class="l-howto-pay__note-item">
+                            <div class="l-howto-pay__note-icon"><img src="images/x.svg" width="" height="" alt="×"></div>
+                            <p class="l-howto-pay__note-text">お選びいただけません。</p>
+                          </div>
+                        </div>
+                        <p class="l-service-intro__point-detail-note js-fade">
+                          ＊保険期間中は、払込方式（回数）･支払方法を変更することはできません。
+                        </p>
+                      </div>
+                      <p class="l-service-intro__point-detail-note js-fade">
+                        ※1 年度ごとの開始の65日前に作成された契約内容に対応する保険料を、ご契約時に登録いただいたクレジットカードに請求させていただきます。請求日は各保険年度の初日が属する月の前月の３日になります。<br>
+                        ※2 月払（35回払）は、年払（3回払）に比べて年度ごとの保険料が5%割増になります。<br>
+                        ※3 郵便局、所定の銀行･コンビニエンスストアまたはスマホ決済にてお支払いいただけます。
+                      </p>
+                    </div>
+                    <div class="l-cta js-fadeup">
+                      <div class="l-button__wrapper">
+                        <a href="https://api.saisonid.com/api/redirect/sc/zi103" class="l-button l-button--big l-button--adjustment js-parameter-link">
+                          <p class="l-button__text"><small class="l-button__text-small l-button__text-small--big">今すぐ</small>無料お見積もり</p>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </details>
               </div>
             </li>
           </ol>
@@ -451,8 +773,13 @@
 
       <section id="faq" class="l-section l-section--faq">
         <div class="l-section__inner l-section__inner--faq l-container">
-          <div class="l-faq-wrapper js-fade">
-            <h2 class="l-section__title js-fade">よくある質問</h2>
+          <details class="l-faq-wrapper js-fade">
+            <summary class="l-faq__heading-summary">
+              <h2 class="l-section__title l-section__title--faq js-fade">
+                よくある質問
+                <span class="l-faq__accordion-icon"></span>
+              </h2>
+            </summary>
             <div class="l-faq">
               <div class="l-faq__list">
                 <details class="l-faq__accordion">
@@ -489,7 +816,8 @@
                   <div class="l-faq__answer">
                     <p class="l-faq__answer-a"><img src="images/a.webp" alt="A"></p>
                     <p class="l-faq__answer-text">
-                      セゾンカード･UCカードでのお支払いにより貯まるポイントとは別に、年間保険料を対象として、保険料1,000円のお支払いにつき3ポイントを付与します。1契約(お車1台)につき、年間600ポイントを上限として付与します。
+                      セゾンカード･UCカードでのお支払いにより貯まるポイントとは別に、年間保険料を対象として、保険料1,000円のお支払いにつき3ポイントを付与します。1契約(お車1台)につき、年間600ポイントを上限として付与します。<br>
+                      ｢無事故お祝い金特約(3年契約のみ)｣の保険料は、ポイント付与の対象外です。このため、保険料総額から想定されるポイント数と実際の付与ポイント数は一致しません。
                       <br>
                       <sup>※小数点以下切捨て</sup>
                     </p>
@@ -503,7 +831,7 @@
                   </summary>
                   <div class="l-faq__answer">
                     <p class="l-faq__answer-a"><img src="images/a.webp" alt="A"></p>
-                    <p class="l-faq__answer-text">いいえ、初回にお申込みいただいた年間保険料に対してポイントを付与しますので、期中の契約内容の変更(異動等)による差額分は｢セゾンの自動車保険 by ソニー損保｣のポイント付与対象外となります。</p>
+                    <p class="l-faq__answer-text">いいえ、1年契約･3年契約いずれも初回にお申し込みいただいた年間保険料に対してポイントを付与しますので、期中の契約内容の変更(異動等)による差額は｢セゾンの自動車保険 by ソニー損保｣のポイント付与対象外となります。</p>
                   </div>
                 </details>
                 <details class="l-faq__accordion">
@@ -514,7 +842,10 @@
                   </summary>
                   <div class="l-faq__answer">
                     <p class="l-faq__answer-a"><img src="images/a.webp" alt="A"></p>
-                    <p class="l-faq__answer-text">保険始期月(補償開始月)の3ヵ月後までに付与いたします。</p>
+                    <p class="l-faq__answer-text">
+                      保険始期月(補償開始月)の3ヵ月後までに付与いたします。<br>
+                      3年契約の場合、第2･第3保険年度はそれぞれの保険始期月の3ヵ月後までに付与いたします。
+                    </p>
                   </div>
                 </details>
                 <details class="l-faq__accordion">
@@ -539,11 +870,44 @@
                     <p class="l-faq__answer-text">本ページよりお申し込み手続きをお進めください。</p>
                   </div>
                 </details>
+                <details class="l-faq__accordion">
+                  <summary class="l-faq__summary">
+                    <p class="l-faq__summary-q"><img src="images/q.webp" alt="Q"></p>
+                    <p class="l-faq__summary-text">3年契約のポイントはいつ付与されますか？</p>
+                    <i class="l-faq__icon"></i>
+                  </summary>
+                  <div class="l-faq__answer">
+                    <p class="l-faq__answer-a"><img src="images/a.webp" alt="A"></p>
+                    <p class="l-faq__answer-text">保険開始月を基準に、1年ごとに付与します。3年分をまとめて付与するものではありません。</p>
+                  </div>
+                </details>
+                <details class="l-faq__accordion">
+                  <summary class="l-faq__summary">
+                    <p class="l-faq__summary-q"><img src="images/q.webp" alt="Q"></p>
+                    <p class="l-faq__summary-text">3年契約は毎年同じポイント数ですか？</p>
+                    <i class="l-faq__icon"></i>
+                  </summary>
+                  <div class="l-faq__answer">
+                    <p class="l-faq__answer-a"><img src="images/a.webp" alt="A"></p>
+                    <p class="l-faq__answer-text">3年契約は保険年度ごとに保険料の計算内容が異なるため、各年度の付与ポイント数は同一とは限りません。</p>
+                  </div>
+                </details>
+                <details class="l-faq__accordion">
+                  <summary class="l-faq__summary">
+                    <p class="l-faq__summary-q"><img src="images/q.webp" alt="Q"></p>
+                    <p class="l-faq__summary-text">1年契約の場合も3年契約の場合も、永久不滅ポイント付与の考え方は同じですか？</p>
+                    <i class="l-faq__icon"></i>
+                  </summary>
+                  <div class="l-faq__answer">
+                    <p class="l-faq__answer-a"><img src="images/a.webp" alt="A"></p>
+                    <p class="l-faq__answer-text">いいえ、3年契約の場合｢無事故お祝い金特約(3年契約のみ)｣の保険料は｢セゾンの自動車保険 by ソニー損保｣のポイント付与対象外となりますので、保険料総額のみから実際の付与ポイント数を算出することはできません。</p>
+                  </div>
+                </details>
               </div>
             </div>
-          </div>
+          </details>
           <div id="serviceDetail" class="l-faq-section__details">
-            <h3 class="l-faq-section__details-title js-fade">セゾンの自動車保険 by ソニー損保<br class="no-pc">(総合自動車保険TypeS)</h3>
+            <h3 class="l-faq-section__details-title js-fade">セゾンの自動車保険 by ソニー損保　<br class="no-pc">(総合自動車保険 Type S)</h3>
             <details class="l-faq__accordion js-fade">
               <summary class="l-faq__summary l-faq__summary--details">
                 <p class="l-faq__summary-text">詳細はこちら</p>
@@ -570,7 +934,10 @@
                   <li class="l-faq-section__details-item">
                     <h4 class="l-faq-section__details-heading">永久不滅ポイント</h4>
                     <div class="l-faq-section__details-content">
-                      <p class="l-faq-section__details-text">セゾンの自動車保険 by ソニー損保(以下、｢対象商品｣)の保険料1,000円につき3ポイントを付与いたします。</p>
+                      <p class="l-faq-section__details-text">
+                        セゾンの自動車保険 by ソニー損保(以下、｢対象商品｣)の保険料1,000円につき3ポイントを付与いたします。<br>
+                        ｢無事故お祝い金特約(3年契約のみ)｣の保険料は、｢セゾンの自動車保険 by ソニー損保｣のポイント付与の対象外です。このため、保険料総額から想定されるポイント数と実際の付与ポイント数は一致しません。
+                      </p>
                       <span class="l-faq-section__details-note">※保険期間中の契約内容変更等による保険料の増減が発生した場合も、ポイント数の調整は行いません。</span>
                       <br>
                       <ul class="l-faq-section__details-sublist">
@@ -586,7 +953,8 @@
                         <li class="l-faq-section__details-subitem">
                           <p class="l-faq-section__details-subheading">付与時期</p>
                           <p class="l-faq-section__details-subtext">
-                            保険始期月(補償開始月)の3ヵ月後まで
+                            保険始期月(補償開始月)の3ヵ月後まで<br>
+                            3年契約の場合、第2･第3保険年度はそれぞれの保険始期月の3ヵ月後までに付与いたします。
                             <br>
                             <span class="l-faq-section__details-note">※付与日時点で有効会員であることが必要となります。</span>
                           </p>
@@ -641,7 +1009,7 @@
             </div>
           </div>
         </div>
-        <p class="l-contact__code js-fade">SAE25-218</p>
+        <p class="l-contact__code js-fade">SAE26-276</p>
       </section>
 
       <section id="other" class="l-section l-section--other">
@@ -660,12 +1028,12 @@
                   <div class="l-other__features">
                     <p class="l-other__feature">ダイレクト自動車保険23年連続売上No.1<sup>※1</sup></p>
                     <p class="l-other__feature">セコム事故現場かけつけサービスで万一の際も安心<sup>※2</sup></p>
-                    <p class="l-other__feature">新規ネット申し込みで最大15,000円割引<sup>※3</sup></p>
+                    <p class="l-other__feature">【1年契約の場合】新規ネット申し込みで最大15,000円割引<sup>※3</sup></p>
                   </div>
                   <p class="l-other__disclaimer">
                     ※1 自動車保険を主にダイレクトで販売している損害保険会社の2024年度までの自動車保険料収入より(ソニー損保調べ)
                     <br>
-                    ※2 お客さまからソニー損保への事故連絡時に、セコム出動のご要請を受けた場合には、その要請に基づきセコムがかけつけます。事故現場が高速道路上・山間部・離島など一部のエリアではサービス対象外です。また、示談交渉は行いません
+                    ※2 お客さまからソニー損保への事故連絡時に、セコム出動のご要請を受けた場合には、その要請に基づきセコムがかけつけます。事故現場が高速道路上･山間部･離島など一部のエリアではサービス対象外です。また、示談交渉は行いません
                     <br>
                     ※3 割引額の内訳：新規申込時のインターネット割引(12,000円)、無事故割引(2,500円)、証券ペーパーレス割引(500円)
                   </p>
@@ -773,7 +1141,7 @@
               </ul>
               <ul class="l-footer__link-list">
                 <li class="l-footer__link-item"><a href="https://okane-recipe.saisoncard.co.jp/hoken/fiduciaryduty/" rel="noopener" target="_blank" class="l-footer__link">お客様本位の業務運営に関する方針(保険代理店業務)</a></li>
-                <li class="l-footer__link-item"><a href="https://okane-recipe.saisoncard.co.jp/hoken/kanyu/" rel="noopener" target="_blank" class="l-footer__link">基本方針・勧誘方針 個人情報に関する取扱(保険代理店業務)</a></li>
+                <li class="l-footer__link-item"><a href="https://okane-recipe.saisoncard.co.jp/hoken/kanyu/" rel="noopener" target="_blank" class="l-footer__link">基本方針･勧誘方針 個人情報に関する取扱(保険代理店業務)</a></li>
               </ul>
             </div>
             <div class="l-footer__company">
@@ -802,7 +1170,89 @@
           </div>
         </div>
       </div>
+
+      <div id="point-modal" class="l-point-modal is-active" role="dialog" aria-modal="true" aria-labelledby="point-modal-title" tabindex="-1" hidden>
+        <div class="l-point-modal__inner">
+          <div class="l-point-modal__content">
+            <button type="button" class="l-point-modal__close" aria-label="ポイント付与詳細を閉じる">
+              <span class="l-point-modal__close-icon"></span>
+            </button>
+            <div class="l-point-modal__content-inner">
+              <h2 id="point-modal-title" class="l-point-modal__heading">｢セゾンの自動車保険 by ソニー損保｣の<br class="no-pc">ポイント付与詳細</h2>
+              <div class="l-point-modal__item-wrapper">
+                <div class="l-point-modal__item l-point-modal__item--one">
+                  <p class="l-point-modal__label">1年契約の例</p>
+                  <div class="l-point-modal__item-inner">
+                    <p class="l-point-modal__description l-point-modal__description--one">年間保険料が<span class="l-point-modal__description-large">77,610</span>円の場合</p>
+                    <div class="l-point-modal__amount-wrapper">
+                      <p class="l-point-modal__amount">77,610<small class="l-point-modal__amount-unit">円÷</small>1,000<small class="l-point-modal__amount-unit">円×</small>3<small class="l-point-modal__amount-unit">ポイント</small></p>
+                      <div class="l-point-modal__value-wrapper">
+                        <p class="l-point-modal__value"><span class="l-point-modal__number">232</span>ポイント</p>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="l-point-modal__catch"><span class="l-point-modal__catch-text">保険始期月を基準に付与</span></p>
+                </div>
+                <div class="l-point-modal__item l-point-modal__item--three">
+                  <p class="l-point-modal__label">3年契約の例</p>
+                  <div class="l-point-modal__item-inner">
+                    <p class="l-point-modal__description">各保険年度の保険料とポイント付与イメージ</p>
+                    <div class="l-point-modal__amount-content">
+                      <div class="l-point-modal__amount-item">
+                        <div class="l-point-modal__year">
+                          <p class="l-point-modal__year-text">第1年度　保険料</p>
+                          <p class="l-point-modal__year-amount">77,610<small class="l-point-modal__year-unit">円</small></p>
+                        </div>
+                        <div class="l-point-modal__value-wrapper">
+                          <p class="l-point-modal__value l-point-modal__value--small"><span class="l-point-modal__value-color">約</span><span class="l-point-modal__number l-point-modal__number--small">198</span>ポイント</p>
+                        </div>
+                      </div>
+                      <div class="l-point-modal__amount-item">
+                        <div class="l-point-modal__year">
+                          <p class="l-point-modal__year-text">第2年度　保険料</p>
+                          <p class="l-point-modal__year-amount">72,870<small class="l-point-modal__year-unit">円</small></p>
+                        </div>
+                        <div class="l-point-modal__value-wrapper">
+                          <p class="l-point-modal__value l-point-modal__value--small"><span class="l-point-modal__value-color">約</span><span class="l-point-modal__number l-point-modal__number--small">193</span>ポイント</p>
+                        </div>
+                      </div>
+                      <div class="l-point-modal__amount-item">
+                        <div class="l-point-modal__year">
+                          <p class="l-point-modal__year-text">第3年度　保険料</p>
+                          <p class="l-point-modal__year-amount">71,670<small class="l-point-modal__year-unit">円</small></p>
+                        </div>
+                        <div class="l-point-modal__value-wrapper">
+                          <p class="l-point-modal__value l-point-modal__value--small"><span class="l-point-modal__value-color">約</span><span class="l-point-modal__number l-point-modal__number--small">189</span>ポイント</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="l-point-modal__catch"><span class="l-point-modal__catch-text">保険始期月を基準に、1年ごとに付与</span></p>
+                  <p class="l-point-modal__note">＊上記は参考例です。</p>
+                </div>
+              </div>
+              <div class="l-point-modal__detail">
+                <div class="l-point-modal__detail-item">
+                  <p class="l-point-modal__detail-heading">3年契約のポイント付与について</p>
+                  <p class="l-point-modal__detail-text">
+                    <span class="l-point-modal__detail-text-box">3年契約は保険年度ごとに保険料の計算内容が異なるため、各年度の付与ポイント数は同一とは限りません。</span><br>
+                    <span class="l-point-modal__detail-text-box">｢無事故お祝い金特約(3年契約のみ)｣の保険料は、｢セゾンの自動車保険 by ソニー損保｣のポイント付与対象外です。このため、保険料総額から想定されるポイント数と実際の付与ポイント数は一致しません。また、3年分をまとめて付与するのではなく、保険始期月を基準に1年ごとに付与します。</span><br>
+                    <span class="l-point-modal__detail-text-box">ご契約内容の変更により第2年度または第3年度の保険料が変わった場合でも、変更による保険料の差額はポイント付与に反映されません。</span>
+                  </p>
+                </div>
+                <div class="l-point-modal__detail-item">
+                  <p class="l-point-modal__detail-heading">1年契約･3年契約共通</p>
+                  <p class="l-point-modal__detail-text">保険期間中の契約内容の変更による追加または返還保険料は、｢セゾンの自動車保険 by ソニー損保｣のポイント数の計算に反映されません。</p>
+                  <p class="l-point-modal__detail-note">※ 参考例はイメージです。実際の付与ポイント数は、ご契約条件、各保険年度の対象保険料等により異なります。1契約(お車1台)につき年間600ポイントが上限です。小数点以下は切り捨てとなります。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <script src="swiper-bundle.min.js"></script>
-  <script defer src="bundle.js"></script></body>
+    <script defer src="bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@6.3.3/dist/simplebar.min.js"></script>
+  </body>
 </html>
