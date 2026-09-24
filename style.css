@@ -487,7 +487,7 @@ sup {
   overflow-y: scroll;
   display: grid;
   row-gap: 32px;
-  block-size: 100vh;
+  block-size: 100%;
 }
 
 .l-button {
@@ -944,10 +944,8 @@ sup {
 }
 
 .l-point-modal__heading {
-  background: var(--gradient-diagonal-blue-green);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-size: calc(15 * var(--rem-ratio));
+  color: var(--color-bluescale-600);
   line-height: var(--leading-snug);
   text-align: center;
 }
@@ -1979,6 +1977,7 @@ sup {
   inline-size: 200px;
   padding-block: 4px 2px;
   color: var(--color-grayscale-0);
+  text-align: center;
 }
 
 .l-table-detail__head--one {
@@ -1999,6 +1998,7 @@ sup {
   background-color: var(--color-bluescale-600);
   border-block-start: 2px solid var(--background-base);
   border-inline-end: 2px solid var(--background-base);
+  text-align: center;
 }
 
 .l-table-detail__category--first {
@@ -2010,11 +2010,13 @@ sup {
 }
 
 .l-table-detail__category-text {
+  display: inline-block;
   font-size: calc(12 * var(--rem-ratio));
   color: var(--color-grayscale-0);
   writing-mode: vertical-rl;
   text-orientation: upright;
   letter-spacing: var(--tracking-wide);
+  white-space: nowrap;
 }
 
 .l-table-detail__label {
@@ -2024,6 +2026,7 @@ sup {
   border-block-start: 2px solid var(--background-base);
   font-size: calc(13 * var(--rem-ratio));
   color: var(--color-grayscale-0);
+  text-align: center;
 }
 
 .l-table-detail__label-note {
@@ -2033,6 +2036,7 @@ sup {
 }
 
 .l-table-detail__data {
+  inline-size: 200px;
   padding-block: 12px 8px;
   font-size: calc(13 * var(--rem-ratio));
   text-align: center;
@@ -2095,10 +2099,11 @@ sup {
   inline-size: calc(156 * var(--fluid-ratio-min));
   padding-block: 5px 3px;
   background-color: var(--color-bluescale-600);
-  font-size: calc(10 * var(--rem-ratio));
-  color: var(--color-grayscale-0);
   border-inline-end: 2px solid var(--background-base);
   border-block-end: 2px solid var(--background-base);
+  font-size: calc(10 * var(--rem-ratio));
+  text-align: center;
+  color: var(--color-grayscale-0);
 }
 
 .l-howto-pay__head--first {
@@ -2117,6 +2122,7 @@ sup {
   background-color: var(--color-bluescale-400);
   border-block-start: 2px solid var(--background-base);
   border-inline-end: 2px solid var(--background-base);
+  text-align: center;
 }
 
 .l-howto-pay__label--first {
@@ -2149,6 +2155,7 @@ sup {
 .l-howto-pay__data-icon {
   display: block;
   inline-size: 28px;
+  margin-inline: auto;
 }
 
 .l-howto-pay__data-sup {
@@ -3850,8 +3857,13 @@ sup {
     margin-block-end: 16px;
   }
 
+  .l-table-detail__content {
+    inline-size: 100%;
+  }
+
   .l-table-detail__head {
     inline-size: 340px;
+    padding-block: 6px 4px;
     font-size: calc(26 * var(--rem-ratio));
   }
 
@@ -3866,7 +3878,7 @@ sup {
 
   .l-table-detail__category {
     inline-size: 68px;
-    padding-block: 25px;
+    padding-block: 27px 19px;
     border-block-start-width: 3px;
     border-inline-end-width: 3px;
   }
@@ -3894,7 +3906,8 @@ sup {
   }
 
   .l-table-detail__data {
-    padding-block: 18px;
+    inline-size: 340px;
+    padding-block: 14px;
     border-block-start-width: 3px;
     font-size: calc(20 * var(--rem-ratio));
   }
